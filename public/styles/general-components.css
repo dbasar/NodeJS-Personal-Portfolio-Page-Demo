@@ -1,0 +1,61 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 7px;
+    height: 100%;
+}
+
+body {
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: Montserrat, 'Lucida Sans', 'Lucida Sans Unicode', Arial, sans-serif;
+    position: relative;
+    background-color: rgb(60, 60, 60);
+    color: white;
+    height: 100%;
+    opacity: 1;
+    -webkit-transition: opacity 1.5s ease;
+    -o-transition: opacity 1.5s ease;
+    transition: opacity 1.5s ease; /* 1sn transition while the page is loading */
+}
+body.fade {
+    opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    transition: opacity .3s ease; /* .3sn transition and 300ms latency in js while the page is closinge */
+}
+
+a {
+    color: rgb(60, 60, 60);
+    text-decoration: none;
+}
+
+/* LOGO */
+
+.logo {
+    font-family: Dancing Script;
+}
+.logo span {
+    display: block;
+}
+.logo span:first-child {
+    font-size: 5.6rem;
+    padding-left: 1rem;
+    margin-bottom: -1rem;
+}
+.logo span:last-child {
+    font-size: 4.2rem;
+}

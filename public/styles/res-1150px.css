@@ -1,0 +1,57 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@media screen and (min-width: 1150px) {
+
+    html {
+        --main-about-width: calc(100vw - 32rem);
+    }
+
+    body.subpage main {
+        padding: 6.5rem 10%;
+        padding: 6.5rem calc(var(--main-about-width) * 0.1) 5rem;
+        /* align-items: flex-end; */
+    }
+    body.subpage main::before {
+        background: -webkit-gradient(linear, left top, right top, from(rgba(60, 60, 60, 0.9)), color-stop(50%, rgba(60, 60, 60, 0.9)), to(transparent));
+        background: -o-linear-gradient(left, rgba(60, 60, 60, 0.9), rgba(60, 60, 60, 0.9) 50%, transparent);
+        background: linear-gradient(to right, rgba(60, 60, 60, 0.9), rgba(60, 60, 60, 0.9) 50%, transparent); 
+    }
+
+    body.subpage main.furnitures::before {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    
+    body.subpage main > * {
+        width: 60%;
+    }
+    body.subpage main.about::after {  /* about a has */
+        background-position: left 7%;
+    }
+    body.subpage main img.showroom {
+        width: 60%;
+    }
+
+
+    body.subpage main form input[type="text"] {
+        width: 47%;
+        width: calc(50% - 0.75rem);
+        margin-right: 0;
+    }
+    body.subpage main form input[type="email"]{
+        width: 100%;
+    }
+    body.subpage main form input[type="text"]:first-child {
+        margin-right: 1.5rem;
+    }
+
+    body.subpage main #modal {
+        padding: 15rem 10rem;
+    }
+
+}

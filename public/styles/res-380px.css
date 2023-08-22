@@ -1,0 +1,21 @@
+
+@media screen and (min-width: 380px) {
+
+    html {
+        font-size: 8px;
+    }
+
+    body.subpage main form input[type="text"] {
+        width: 47%;
+        width: calc(50% - 0.75rem);
+    }
+    body.subpage main form input[type="text"]:first-child {
+        margin-right: 1.5rem;
+    }
+
+    body.subpage main img.showroom {
+        margin-left: 0;
+        width: 100%;
+    }
+
+}

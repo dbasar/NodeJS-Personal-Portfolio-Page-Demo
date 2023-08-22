@@ -1,0 +1,123 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body #top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 7rem;
+    background-color: white;
+    -webkit-box-shadow: 0 0 .5rem gray;
+            box-shadow: 0 0 .5rem gray;
+    z-index: 7;
+    cursor: pointer;
+}
+
+
+body #top-bar::after {
+    content: "";
+    z-index: 1;
+    background-color: transparent;
+}
+body.menu-open #top-bar::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px); 
+    -webkit-transition: background-color .3s ease, -webkit-backdrop-filter .3s ease; 
+    transition: background-color .3s ease, -webkit-backdrop-filter .3s ease; 
+    -o-transition: backdrop-filter .3s ease, background-color .3s ease; 
+    transition: backdrop-filter .3s ease, background-color .3s ease; 
+    transition: backdrop-filter .3s ease, background-color .3s ease, -webkit-backdrop-filter .3s ease; 
+} 
+
+
+body #top-bar span {
+    display: block;
+    width: 4rem;
+    height: .2rem;
+    background-color: rgb(60, 60, 60);
+    position: absolute;
+    top: 50%;
+    right: 3rem;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+body #top-bar span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(60, 60, 60);
+    -webkit-transform: translateY(-1rem);
+        -ms-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+body #top-bar span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(60, 60, 60);
+    -webkit-transform: translateY(1rem);
+        -ms-transform: translateY(1rem);
+            transform: translateY(1rem);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+body #top-bar:active span,
+body #top-bar:active span::before,
+body #top-bar:active span::after {
+    -webkit-box-shadow: 0 0 .4rem grey;
+            box-shadow: 0 0 .4rem grey;
+}
+@media (pointer: fine) {
+    body #top-bar:hover span,
+    body #top-bar:hover span::before,
+    body #top-bar:hover span::after {
+        -webkit-box-shadow: 0 0 .4rem grey;
+                box-shadow: 0 0 .4rem grey;
+    }
+}
+
+body.menu-open #top-bar span {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    z-index: 3;
+}
+body.menu-open #top-bar span::before {
+    background-color: white;
+    -webkit-transform: translate(0) rotate(45deg);
+        -ms-transform: translate(0) rotate(45deg);
+            transform: translate(0) rotate(45deg);
+}
+body.menu-open #top-bar span::after {
+    background-color: white;
+    -webkit-transform: translate(0) rotate(-45deg);
+        -ms-transform: translate(0) rotate(-45deg);
+            transform: translate(0) rotate(-45deg);
+}

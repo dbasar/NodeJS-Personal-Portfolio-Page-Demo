@@ -1,0 +1,217 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body.subpage main #modal {
+    position: fixed;
+    display: none;
+    top: 7rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10rem 3rem;
+    z-index: 3;
+    background-color: rgba(50, 50, 50, 0.95);
+    overflow-y: auto;
+}
+body.subpage main #modal.open {
+    display: block;
+    -webkit-animation-name: modal-opacity;
+            animation-name: modal-opacity;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+}
+@-webkit-keyframes modal-opacity {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes modal-opacity {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+body.subpage main #modal #modal-closer {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10rem;
+    height: 10rem;
+    cursor: pointer;
+    z-index: 2;
+}
+body.subpage main #modal #modal-closer::before,
+body.subpage main #modal #modal-closer::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 4rem;
+    height: .2rem;    
+    background-color: white;
+    opacity: 1;
+}
+body.subpage main #modal #modal-closer::before{
+    -webkit-transform: translate(-50%, -0.1rem) rotate(45deg);
+        -ms-transform: translate(-50%, -0.1rem) rotate(45deg);
+            transform: translate(-50%, -0.1rem) rotate(45deg);
+    -webkit-animation-name: turn-clockwise;
+            animation-name: turn-clockwise;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+body.subpage main #modal #modal-closer::after {
+    -webkit-transform: translate(-50%, -0.1rem) rotate(-45deg);
+        -ms-transform: translate(-50%, -0.1rem) rotate(-45deg);
+            transform: translate(-50%, -0.1rem) rotate(-45deg);
+    -webkit-animation-name: turn-counter-clockwise;
+            animation-name: turn-counter-clockwise;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+@-webkit-keyframes turn-clockwise {
+    0% { -webkit-transform: translate(-50%, -0.1rem); transform: translate(-50%, -0.1rem); 
+         opacity: 0}
+    25% { -webkit-transform: translate(-50%, -0.1rem); transform: translate(-50%, -0.1rem);
+          opacity: 0; }
+    100% { -webkit-transform: translate(-50%, -0.1rem) rotate(45deg); transform: translate(-50%, -0.1rem) rotate(45deg);
+           opacity: 1; }
+}
+@keyframes turn-clockwise {
+    0% { -webkit-transform: translate(-50%, -0.1rem); transform: translate(-50%, -0.1rem); 
+         opacity: 0}
+    25% { -webkit-transform: translate(-50%, -0.1rem); transform: translate(-50%, -0.1rem);
+          opacity: 0; }
+    100% { -webkit-transform: translate(-50%, -0.1rem) rotate(45deg); transform: translate(-50%, -0.1rem) rotate(45deg);
+           opacity: 1; }
+}
+@-webkit-keyframes turn-counter-clockwise {
+    0% { -webkit-transform: translate(-50%, -0.1rem); transform: translate(-50%, -0.1rem); 
+         opacity: 0 }
+    25% { -webkit-transform: translate(-50%, -0.1rem); transform: translate(-50%, -0.1rem);
+          opacity: 0; }
+    100% { -webkit-transform: translate(-50%, -0.1rem) rotate(-45deg); transform: translate(-50%, -0.1rem) rotate(-45deg);
+           opacity: 1; }
+}
+@keyframes turn-counter-clockwise {
+    0% { -webkit-transform: translate(-50%, -0.1rem); transform: translate(-50%, -0.1rem); 
+         opacity: 0 }
+    25% { -webkit-transform: translate(-50%, -0.1rem); transform: translate(-50%, -0.1rem);
+          opacity: 0; }
+    100% { -webkit-transform: translate(-50%, -0.1rem) rotate(-45deg); transform: translate(-50%, -0.1rem) rotate(-45deg);
+           opacity: 1; }
+}
+
+body.subpage main #modal figure {
+    width: 100%;
+    height: 100%;    
+    display: -webkit-box;    
+    display: -ms-flexbox;    
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+}
+body.subpage main #modal figure img { 
+    display: block;
+    width: 100%;
+    max-height: 54vh;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin-bottom: 2rem;    
+    -webkit-filter: drop-shadow(0 0 1.5rem white);    
+            filter: drop-shadow(0 0 1.5rem white);
+}
+
+
+body.subpage main #modal figure figcaption {
+    text-align: center;
+    letter-spacing: 0.06rem;
+}
+body.subpage main #modal figure figcaption span:first-child {
+    display: block;
+    font-size: 120%;
+    font-weight: 600;    
+    -webkit-transform: none;    
+        -ms-transform: none;    
+            transform: none;
+    -webkit-animation-name: slide-down;
+            animation-name: slide-down;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+body.subpage main #modal figure figcaption span:nth-child(2) {
+    display: block;
+    height: 0.1rem;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgb(200, 200, 200)), color-stop(50%, rgb(255, 255, 255)), to(rgb(200, 200, 200)));
+    background-image: -o-linear-gradient(left, rgb(200, 200, 200), rgb(255, 255, 255) 50%, rgb(200, 200, 200));
+    background-image: linear-gradient(to right, rgb(200, 200, 200), rgb(255, 255, 255) 50%, rgb(200, 200, 200));
+    width: 100%;
+    margin: 0.2rem auto 1rem;
+    -webkit-animation-name: elongate;
+            animation-name: elongate;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+body.subpage main #modal figure figcaption span:last-child {
+    display: block;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -webkit-animation-name: slide-up;
+            animation-name: slide-up;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+@-webkit-keyframes slide-down {
+    from { -webkit-transform: translateY(-2rem); transform: translateY(-2rem); opacity: 0; }
+    10% { -webkit-transform: translateY(-2rem); transform: translateY(-2rem); opacity: 0; }
+    to { -webkit-transform: none; transform: none;
+        opacity: 1; }
+}
+
+@keyframes slide-down {
+    from { -webkit-transform: translateY(-2rem); transform: translateY(-2rem); opacity: 0; }
+    10% { -webkit-transform: translateY(-2rem); transform: translateY(-2rem); opacity: 0; }
+    to { -webkit-transform: none; transform: none;
+        opacity: 1; }
+}
+@-webkit-keyframes slide-up {
+    from { -webkit-transform: translateY(2rem); transform: translateY(2rem); opacity: 0; }
+    10% { -webkit-transform: translateY(2rem); transform: translateY(2rem); opacity: 0; }
+    to { -webkit-transform: none; transform: none;
+        opacity: 1; }
+}
+@keyframes slide-up {
+    from { -webkit-transform: translateY(2rem); transform: translateY(2rem); opacity: 0; }
+    10% { -webkit-transform: translateY(2rem); transform: translateY(2rem); opacity: 0; }
+    to { -webkit-transform: none; transform: none;
+        opacity: 1; }
+}
+@-webkit-keyframes elongate {
+    from { width: 0;
+        opacity: 0; }
+    10% { width: 0;
+        opacity: 0; }
+    to { width: 100%;
+        opacity: 1; }
+}
+@keyframes elongate {
+    from { width: 0;
+        opacity: 0; }
+    10% { width: 0;
+        opacity: 0; }
+    to { width: 100%;
+        opacity: 1; }
+}
+

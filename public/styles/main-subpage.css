@@ -1,0 +1,299 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body.subpage main {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 50% 3rem 4rem;
+    padding: calc(50vh + 3.5rem) 3rem 4rem;
+    overflow-y: hidden;
+}
+
+body.subpage main::after {    
+    content: "";
+    display: block;
+    position: fixed;
+    top: 7rem; /* top bar height */
+    top: 0;
+    bottom: -10rem; /* prevention against sliding on mobile phones */
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background-size: cover;
+    background-position: center top;
+}
+body.subpage main.contact::after {
+    background-image: url(../images/backgrounds/contact.jpg);
+}
+body.subpage main.furniture::after {
+    background-image: url(../images/backgrounds/furniture.jpg);
+}
+body.subpage main.industrial-design::after {
+    background-image: url(../images/backgrounds/industrial-design.jpg);
+}
+body.subpage main.about::after {
+    background-image: url(../images/backgrounds/about.jpg);
+    background-position: right top;
+}
+
+
+body.subpage main::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: -o-linear-gradient(top, transparent, rgba(60, 60, 60, 0.9) calc(75vh + 3.5rem), rgba(60, 60, 60, 0.9));
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(rgba(60, 60, 60, 0.9)), to(rgba(60, 60, 60, 0.9)));
+    background: linear-gradient(to bottom, transparent, rgba(60, 60, 60, 0.9) calc(75vh + 3.5rem), rgba(60, 60, 60, 0.9));
+    z-index: 1; /* to make it in front of the picture */
+}
+
+
+body.subpage main h1 {
+    position: relative;
+    font-size: 2.5rem;
+    font-size: 4rem;
+    line-height: 4rem;
+    vertical-align: middle;   
+    letter-spacing: .2rem;
+    font-weight: 800;
+    z-index: 2; /* to make in in front of picture and main::before */
+    margin-bottom: 1rem;
+    text-shadow: 0 0 0.08rem grey; /* to let it be read in front of the transparent background */
+}
+body.subpage main h1 span {
+    display: block;
+    font-weight: 800;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -webkit-transition: -webkit-transform 1s ease;
+            transition: -webkit-transform 1s ease;
+         -o-transition: transform 1s ease;
+            transition: transform 1s ease;
+            transition: transform 1s ease, -webkit-transform 1s ease;
+}
+body.subpage main h1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: .1rem;
+    background: -o-linear-gradient(left, rgb(255, 255, 255), rgb(200, 200, 200));
+    background: -webkit-gradient(linear, left top, right top, from(rgb(255, 255, 255)), to(rgb(200, 200, 200)));
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(200, 200, 200));
+    -webkit-transition: width 1.5s ease;
+         -o-transition: width 1.5s ease;
+            transition: width 1.5s ease; /* to let the bottom line lenghten with page load*/
+}
+
+
+body.subpage main p {    
+    letter-spacing: .05rem;
+    line-height: 160%;
+    position: relative;
+    z-index: 2; /* to let it be in front of picture and main::before */
+    text-shadow: 0 0 0.08rem grey; /* to let it be read in front of the transparent background */
+    margin: 1rem 0;
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    -o-transition: transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease; /* for the animation on page load */
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+}
+
+
+body.subpage main form {
+    z-index: 2;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    -o-transition: transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+}
+body.subpage main form input,
+body.subpage main form textarea {
+    width: 100%;    
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-radius: .2rem;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transition: -webkit-box-shadow .2s ease;
+    transition: -webkit-box-shadow .2s ease;
+    -o-transition: box-shadow .2s ease;
+    transition: box-shadow .2s ease;
+    transition: box-shadow .2s ease, -webkit-box-shadow .2s ease;
+    font-family: Montserrat, 'Lucida Sans', 'Lucida Sans Unicode', Arial, sans-serif;
+    letter-spacing: .08rem;
+}
+
+body.subpage main form input {
+    height: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;    
+}
+body.subpage main form textarea {
+    height: 20rem;
+    resize: none;
+    padding: 1rem;
+}
+body.subpage main form input:focus,
+body.subpage main form textarea:focus {
+    -webkit-box-shadow: 0 0 0 .4rem rgb(200, 200, 200);
+            box-shadow: 0 0 0 .4rem rgb(200, 200, 200);
+    outline: none;
+}
+body.subpage main form > input.empty,
+body.subpage main form > textarea.empty {
+    -webkit-box-shadow: 0 0 0 .4rem rgb(252, 0, 0);
+            box-shadow: 0 0 0 .4rem rgb(252, 0, 0);
+}
+body.subpage main form button {
+    height: 4rem;
+    width: 20rem;
+    max-width: 100%;
+    font-size: 2rem;
+    border-radius: .2rem;
+    border: .2rem solid rgb(200, 200, 200);
+    font-family: Montserrat, 'Lucida Sans', 'Lucida Sans Unicode', Arial, sans-serif;
+    letter-spacing: .08rem;
+    cursor: pointer;
+    background-color: rgb(100, 100, 100);
+    color: white;
+    -webkit-transition: background-color .2s ease;
+    -o-transition: background-color .2s ease;
+    transition: background-color .2s ease;
+}
+body.subpage main form button:active {
+    background-color: rgb(150, 150, 150);
+}
+@media (pointer: fine) {
+    body.subpage main form button:hover {
+        background-color: rgb(150, 150, 150);
+    }
+}
+body.subpage main address {
+    margin: 1rem 0;
+    z-index: 3;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    -o-transition: transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+    line-height: 150%;
+}
+body.subpage main address a {
+    color: white;
+}
+
+
+body.subpage.fade main h1::after { /* page load animation */
+    width: 0;
+} 
+body.subpage.fade main h1 span {
+    -webkit-transform: translateY(-4rem);
+        -ms-transform: translateY(-4rem);
+            transform: translateY(-4rem);
+}
+body.subpage.fade main p,
+body.subpage.fade main img.showroom,
+body.subpage.fade main form,
+body.subpage.fade main address,
+body.subpage.fade main footer { /* page load animation */
+    -webkit-transform: translateY(4rem);
+        -ms-transform: translateY(4rem);
+            transform: translateY(4rem);
+}
+
+
+body.subpage main footer {
+    padding-top: 4rem;
+    z-index: 2; /* to let it be in front of picture and main::before */
+    text-shadow: 0 0 0.08rem grey; /* to let it be read in front of the transparent background */    
+    margin-top: auto;
+    position: relative;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    -o-transition: transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+
+body main span.copy {
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+}
+
+
+body.subpage main img.showroom {
+    display: block;
+    width: 100%;
+    width: calc(100% + 6rem);
+    margin-left: -3rem;
+    z-index: 2;
+    cursor: pointer;
+    margin-bottom: 6rem;
+    background-color: white;
+    padding: .5rem;
+    
+    -webkit-transform: none;
+    
+        -ms-transform: none;
+    
+            transform: none;
+    -webkit-transition: -webkit-transform 1s ease, -webkit-box-shadow .3s ease;
+    transition: -webkit-transform 1s ease, -webkit-box-shadow .3s ease;
+    -o-transition: transform 1s ease, box-shadow .3s ease;
+    transition: transform 1s ease, box-shadow .3s ease;
+    transition: transform 1s ease, box-shadow .3s ease, -webkit-transform 1s ease, -webkit-box-shadow .3s ease;
+}
+body.subpage main img.showroom:first-of-type {
+    margin-top: 5rem;
+}
+body.subpage main img.showroom:active {
+    -webkit-box-shadow: 0 0 1.5rem white;
+            box-shadow: 0 0 1.5rem white;
+}
+@media (pointer: fine) {
+    body.subpage main img.showroom:hover {
+        -webkit-box-shadow: 0 0 1.5rem white;
+                box-shadow: 0 0 1.5rem white;
+    }
+}
+

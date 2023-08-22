@@ -1,0 +1,20 @@
+@media screen and (min-width: 950px) {
+
+    html {
+        font-size: 9px;
+    }
+
+    body.subpage main form input[type="text"],
+    body.subpage main form input[type="email"] {
+        width: 30%;
+        width: calc(33.33% - 1rem);
+    }
+    body.subpage main form input[type="text"] {
+        margin-right: 1.5rem;
+    }
+
+    body.subpage main #modal {
+        padding: 15rem 8rem;
+    }
+
+}

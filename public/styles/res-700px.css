@@ -1,0 +1,80 @@
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@media screen and (min-width: 700px) {
+    
+    html {
+        font-size: 8px;
+    }
+
+    body header {       
+        width: 32rem;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+    }    
+
+    body #top-bar {
+        display: none;
+    }
+
+    body.homepage main #content-logo {
+        display: none;
+    }
+    body.homepage main #hero-link {
+        top: 6rem;
+    }
+    body.homepage main footer #home-copy-small {
+        display: none;
+    }
+    body.homepage main footer #home-copy-large {
+        display: inline;
+    }
+
+    body.subpage main,
+    body.homepage main {
+        margin-left: 32rem;
+        width: auto;
+    }
+
+
+    body.subpage main {
+        padding-top: 50vh;
+        padding: 50vh 6rem 6.5rem;
+        
+        padding: 50vh 6rem 5rem;
+    }
+    body.subpage main::after {
+        /* top: 0; */
+        left: 32rem;
+        width: calc(100vw - 32rem);
+        /* bottom: 0; */
+    }
+    body.subpage main::before {
+        inset: 0;
+        background: -o-linear-gradient(top, transparent, rgba(60, 60, 60, 0.9) 75vh, rgba(60, 60, 60, 0.9));
+        background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(75vh, rgba(60, 60, 60, 0.9)), to(rgba(60, 60, 60, 0.9)));
+        background: linear-gradient(to bottom, transparent, rgba(60, 60, 60, 0.9) 75vh, rgba(60, 60, 60, 0.9));
+    }
+
+
+    body.subpage main #modal {
+        top: 0;
+        left: 32rem;
+        width: auto;
+        padding: 15rem 5rem;
+    }
+    body.subpage main #modal figure img {
+        max-height: 70vh;
+    }
+
+    body.subpage main address a[href^="tel"] {
+        pointer-events: none;
+    }
+
+}
