@@ -30,7 +30,7 @@
     body.subpage main > * {
         width: 60%;
     }
-    body.subpage main.about::after {  /* about a has */
+    body.subpage main.about::after {  /* limited to the about page */
         background-position: left 7%;
     }
     body.subpage main img.showroom {
