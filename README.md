@@ -1,5 +1,7 @@
-# NodeJS-Personal-Portfolio-Page-Demo
+# NodeJS-Personal-Portfolio-Page-Demo-Static-Pages
 
+By Doruk Başar. <br>
+<br>
 This is the demo of the personal webpage I had created for my spouse using Node.js. <br>
 The page uses static HTML, CSS, and JS files from the public folder and uploads them according to the provided url. <br>
 There are two sets of static html files, one in the Turkish language and the other in the English language. The language choice is stored in a cookie and used in ensuing requests. <br>
