@@ -8,7 +8,6 @@ There are two sets of static html files, one in the Turkish language and the oth
 <br>
 The exact design is also used in a static page (in Turkish language) that I've created and put in this repository: <br>
 https://ozlemyb.github.io/ <br>
-<br>
 I've also redone the same project using pug template engine instead of static HTML files and provided it on this repository: <br>
 https://github.com/dbasar/NodeJs-Personal-Portfolio-Page-Demo-Pug-Engine <br>
 <br>
